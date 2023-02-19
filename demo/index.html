@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="../dist/aria-announce.css" rel="stylesheet" media="screen" />
+        <script type="text/javascript" src="../dist/aria-announce.js"></script>
+    </head>
+    <body>
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                dioada.announce.init({
+                    test: true
+                });
+                window.announce = dioada.announce;
+            });
+        </script>
+        <style>
+            button {
+                margin-bottom: 10px;
+            }
+        </style>
+        <h1>aria-announce demo</h1>
+        <div>
+            <button type="button" onclick="announce('Hello')">Announce "Hello"</button>
+        </div>
+        <div>
+            <button type="button" onclick="announce('Bye', {clearAfter: 1})">Announce "Bye" and clear after 1 second</button>
+        </div>
+        <p>Click the test bar to clear it early</p>
+    </body>
+</html>
